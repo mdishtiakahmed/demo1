@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Assests/Css/bootstrap.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <section class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary rounded">
+          <div class="container-fluid ">
+            <a class="navbar-brand" href="/index.html"><img src="/Assests/Image/T.png" width="70px" height="70px" class="rounded-circle"><span class="d-none d-sm-inline-block">Md Ishtiak Ahmed Robin</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <h3 class="d-block d-sm-none text-end">Md Ishtiak Ahmed Robin</h3>
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                  <a class="nav-link text-end" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-end" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-end" href="/blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-end active text-end" aria-current="page" href="/contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+   </section>
+<div class="container">
+  <div class="row d-flex justify-content-center ">
+    <div class="col-12 col-sm-10 col-md-8 col-xl-6 col-xxl-5 text-center">
+      <h1 class="bg-danger">Contact Form</h1>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-xl-6 col-xxl-5">
+      <div class="card border border-0 shadow">
+        <form action="#" class="m-3 p-3">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control" style="height: 200px; resize: none;" placeholder="Leave a Message here" id="floatingTextarea" required></textarea>
+            <label for="floatingTextarea">Message</label>
+          </div>
+        </form>
+        <div class="mt-3 d-flex justify-content-center" >
+          <button class="btn btn-primary w-75 m-3 p-3" id="liveToastBtn" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOASTS SECTION -->
+<div class="toast-container position-fixed top-0 start-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="/Assests/Image/T.png" class="rounded me-2" width="50px" height="50px">
+      <strong class="me-auto">Thank You!</strong>
+      <small>0s ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <p style="color: red; display: inline-block">Md Ishtiak Ahmed Robin</p> recived your message.
+    </div>
+  </div>
+</div>
+
+
+     <script src="/Assests/Js/bootstrap.bundle.js"></script>
+     <script>
+      const toastTrigger = document.getElementById('liveToastBtn')
+      const toastLiveExample = document.getElementById('liveToast')
+
+      if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+          toastBootstrap.show()
+        })
+      }
+     </script>
+</body>
+</html>

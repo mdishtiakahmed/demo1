@@ -1,0 +1,63 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('/Assests/Image/bg.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+  }
+.mt-20{
+    margin-top: 12rem !important;
+}
+
+/* Animation */
+.Animation-1 {
+  --uib-size: 40px;
+  --uib-color: rgb(243, 8, 8);
+  --uib-speed: 1.75s;
+  position: relative;
+  height: var(--uib-size);
+  width: var(--uib-size);
+}
+
+.Animation-1::before,
+.Animation-1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  animation: pulse var(--uib-speed) ease-in-out infinite;
+  transform: scale(0);
+  transition: background-color 0.3s ease;
+}
+
+.Animation-1::after {
+  animation-delay: calc(var(--uib-speed) / -2);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+}
+
+/* FONTS */
+
+.oswald-font2{
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
